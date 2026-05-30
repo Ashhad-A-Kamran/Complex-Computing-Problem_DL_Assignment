@@ -8,25 +8,34 @@ The project models the progression of patient deterioration through three archit
 
 ```text
 DL_assigment/
-├── notebook.ipynb            # Master Directory Notebook linking to individual generations
 ├── README.md                 # Project documentation
-├── assignment.txt            # Original assignment prompt and rubrics
-├── generate_gen3.py          # Script for Generation 3 (ClinicalBERT Fine-tuning)
-├── merge_notebooks.py        # Utility to generate the master notebook index
-├── generate_master_nb.py     # Utility to link executed scripts in the master notebook
-├── Part_A/                   # Core implementation scripts for Generations 1 & 2
-│   ├── generation_1.py       # Baseline DNN training script
-│   ├── generation_2.ipynb    # Recurrent sequence models (LSTM, GRU, BiLSTM)
-│   ├── unified_eval.py       # Unified metric aggregation script
-│   └── extended_eval.py      # Script to generate extensive tradeoff visualizations
-├── Part_B/                   # LaTeX Report files
-│   ├── report.tex            # Final technical report source
-│   └── *.png                 # Visualizations and confusion matrices
-└── assets/                   # Evaluation results and model metric logs
-    ├── generation_1/         # DNN metrics
-    ├── generation_2/         # RNN metrics
-    ├── generation_3/         # ClinicalBERT metrics
-    └── evaluation/           # Unified tables and plots
+├── Report.pdf                # Compiled final technical report
+├── notebook.ipynb            # Master Directory Notebook linking to individual generations
+├── scripts/                  # Pre-executed notebooks and generated PDFs
+│   ├── generation1.ipynb / .pdf
+│   ├── generation2.ipynb / .pdf
+│   └── generation3.ipynb / .pdf
+└── src/                      # Source code and assignment assets
+    ├── pyproject.toml / uv.lock # Python environment configuration
+    ├── convert_to_pdf.py     # Utility to convert notebooks to PDF
+    ├── merge_notebooks.py    # Utility to generate the master notebook index
+    ├── assignment.txt        # Original assignment prompt and rubrics
+    ├── notebook.ipynb        # Source for Master Directory Notebook
+    ├── data/                 # Raw and processed datasets
+    ├── Part_A/               # Core implementation scripts for Generations 1-3
+    │   ├── generation_1.py   # Baseline DNN training script
+    │   ├── generation_2.ipynb # Recurrent sequence models (LSTM, GRU, BiLSTM)
+    │   ├── generation_3.ipynb # ClinicalBERT Fine-tuning
+    │   ├── unified_eval.py   # Unified metric aggregation script
+    │   └── extended_eval.py  # Script to generate extensive tradeoff visualizations
+    ├── Part_B/               # LaTeX Report files
+    │   ├── report.tex        # Final technical report source
+    │   └── *.png             # Visualizations and confusion matrices
+    └── assets/               # Evaluation results and model metric logs
+        ├── generation_1/     # DNN metrics
+        ├── generation_2/     # RNN metrics
+        ├── generation_3/     # ClinicalBERT metrics
+        └── evaluation/       # Unified tables and plots
 ```
 
 ## Model Generations
