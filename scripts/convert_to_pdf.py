@@ -39,8 +39,8 @@ async def convert_html_to_pdf(html_path, pdf_path):
         print(f"Finished {pdf_path}")
 
 async def main():
-    html_file = "src/Part_B/report.html"
-    pdf_file = "Report2.pdf"
+    html_file = "report.html"
+    pdf_file = "Report.pdf"
     
     if os.path.exists(html_file):
         await convert_html_to_pdf(html_file, pdf_file)
